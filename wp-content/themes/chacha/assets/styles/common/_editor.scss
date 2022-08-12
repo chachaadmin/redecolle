@@ -1,0 +1,16 @@
+.components-panel {
+    .components-base-control__label {
+        display: block;
+    }
+
+    .rich-text,
+    .components-button {
+        border: 1px solid lightgray;
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+.interface-interface-skeleton__content {
+    z-index: 100;
+}

@@ -1,0 +1,60 @@
+//------------------------------------------------------------------------------
+// Grid
+//------------------------------------------------------------------------------
+
+/**
+ * The breakpoint keys.
+ * @var breakpoints
+ * @since 1.0.0
+ */
+ $breakpoints: (
+	xxxl,
+	xxl,
+	xl,
+	lg,
+	md,
+	sm,
+	xs
+);
+
+/**
+ * The grid breakpoints.
+ * @var grid
+ * @since 1.0.0
+ */
+$grid: (
+	xs:   375px,
+	sm:   575px,
+	md:   768px,
+	lg:   1024px,
+	xl:   1440px,
+	xxl:  1600px,
+	xxxl: 1920px
+);
+
+//------------------------------------------------------------------------------
+// Transitions
+//------------------------------------------------------------------------------
+
+/**
+ * Transition speed and curves.
+ * @var transitions
+ * @since 1.0.0
+ */
+$transitions: (
+
+	soft: (
+		duration: 1000ms,
+		equation: cubic-bezier(0.230, 1.000, 0.320, 1.000)
+	),
+
+	fast: (
+		duration: 500ms,
+		equation: cubic-bezier(0.230, 1.000, 0.320, 1.000)
+	),
+
+	hover: (
+		duration: 500ms,
+		equation: cubic-bezier(0.230, 1.000, 0.320, 1.000)
+	)
+);

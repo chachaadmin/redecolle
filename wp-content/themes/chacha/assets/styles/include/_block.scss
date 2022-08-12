@@ -1,0 +1,27 @@
+@import "include/anim";
+@import "include/flex";
+@import "include/grid";
+@import "include/math";
+@import "include/typo";
+@import "include/vars";
+@import "include/mixin";
+
+/**
+ * Initialize the common styles of a block.
+ * @function block
+ * @since 1.0.1
+ */
+@mixin block($spacing: spaced, $mul: 1) {
+
+	@include relative;
+
+	@if ($spacing == spaced) {
+		margin-top: rvw(90px);
+		margin-bottom: rvw(90px);
+	}
+
+	@if ($spacing == padded) {
+		padding-top: rvw(90px);
+		padding-bottom: rvw(90px);
+	}
+}

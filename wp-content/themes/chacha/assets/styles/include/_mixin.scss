@@ -1,0 +1,633 @@
+/**
+ * @mixin placeholder
+ * @since 1.0.0
+ */
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+/**
+ * @mixin selection
+ * @since 1.0.0
+ */
+@mixin selection {
+	::selection {
+		@content;
+	}
+
+	::-moz-selection {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-child mixin to improve loop readability.
+ * @function nth-child
+ * @since 1.0.0
+ */
+@mixin nth-child($i) {
+	&:nth-child(#{$i}) {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-child mixin with content parameter.
+ * @function nth-child
+ * @since 1.0.0
+ */
+@mixin nth-child-in($a, $b) {
+	@for $i from $a through $b {
+		@include nth-child($i) {
+			@content ($i);
+		}
+	}
+}
+
+/**
+ * Convenience nth-child mixin to improve loop readability.
+ * @function nth-of-type
+ * @since 1.0.0
+ */
+@mixin nth-of-type($i) {
+	&:nth-of-type(#{$i}) {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-child mixin to improve loop readability.
+ * @function nth-last-child
+ * @since 1.0.0
+ */
+@mixin nth-last-child($i) {
+	&:nth-last-child(#{$i}) {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-last-of-type mixin to improve loop readability.
+ * @function nth-last-of-type
+ * @since 1.0.0
+ */
+@mixin nth-last-of-type($i) {
+	&:nth-last-of-type(#{$i}) {
+		@content;
+	}
+}
+
+/**
+ * Convenience data-nth-item mixin to improve loop readability.
+ * @mixin nth-item
+ * @since 1.0.0
+ */
+@mixin nth-item($i) {
+
+	&.item:nth-child(#{$i}),
+	.item:nth-child(#{$i}) & {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-item mixin with content parameter.
+ * @mixin nth-item
+ * @since 1.0.0
+ */
+@mixin nth-item-in($a, $b) {
+	@for $i from $a through $b {
+		@include nth-item($i) {
+			@content ($i);
+		}
+	}
+}
+
+/**
+ * Convenience data-nth-line mixin to improve loop readability.
+ * @mixin nth-word
+ * @since 1.0.0
+ */
+@mixin nth-line($i) {
+	&[data-nth-line="#{$i}"] {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-line mixin with content parameter.
+ * @mixin nth-line
+ * @since 1.0.0
+ */
+@mixin nth-line-in($a, $b) {
+	@for $i from $a through $b {
+		@include nth-line($i) {
+			@content ($i);
+		}
+	}
+}
+
+/**
+ * Convenience data-nth-word mixin to improve loop readability.
+ * @mixin nth-word
+ * @since 1.0.0
+ */
+@mixin nth-word($i) {
+	&[data-nth-word="#{$i}"] {
+		@content;
+	}
+}
+
+/**
+ * Convenience nth-word mixin with content parameter.
+ * @mixin nth-word
+ * @since 1.0.0
+ */
+@mixin nth-word-in($a, $b) {
+	@for $i from $a through $b {
+		@include nth-word($i) {
+			@content ($i);
+		}
+	}
+}
+
+/**
+ * Targets the last row of a sepcified amount of columns.
+ * @mixin last-row
+ * @since 1.0.0
+ */
+@mixin last-row($of) {
+
+	&:nth-child(#{$of}n + 1):nth-last-child(-n + #{$of}),
+	&:nth-child(#{$of}n + 1):nth-last-child(-n + #{$of})~& {
+		@content;
+	}
+}
+
+/**
+ * Position an element with absolute type.
+ * @mixin absolute
+ * @since 1.0.0
+ */
+@mixin absolute($args: ()) {
+	@include position(absolute, $args);
+}
+
+/**
+ * Position an element with relative type.
+ * @mixin relative
+ * @since 1.0.0
+ */
+@mixin relative($args: ()) {
+	@include position(relative, $args);
+}
+
+/**
+ * Position an element with sticky type.
+ * @mixin sticky
+ * @since 1.0.0
+ */
+@mixin sticky($args: ()) {
+	@include position(sticky, $args);
+}
+
+/**
+ * Position an element with fixed type.
+ * @mixin fixed
+ * @since 1.0.0
+ */
+@mixin fixed($args: ()) {
+	@include position(fixed, $args);
+}
+
+/**
+ * Convenience mixin to position a element absolutely.
+ * @mixin fill
+ * @since 1.0.0
+ */
+@mixin fill($by: 0) {
+	@include absolute(top $by left $by right $by bottom $by);
+}
+
+/**
+ * Disables br.
+ * @function no-br
+ * @since 1.0.0
+ */
+@mixin no-br {
+	br {
+		display: none;
+	}
+}
+
+/**
+ * Convenience z-index mixin used for easier debugging.
+ * @function elevated
+ * @since 1.0.0
+ */
+@mixin elevated($name, $offset: 0) {
+	@if $name==block {
+		z-index: 10 + $offset;
+	}
+
+	@else if $name==content {
+		z-index: 15 + $offset;
+	}
+
+	@else if $name==header {
+		z-index: 50 + $offset;
+	}
+
+	@else if $name==footer {
+		z-index: 50 + $offset;
+	}
+
+	@else {
+		z-index: $name + $offset;
+	}
+}
+
+/**
+ * Convenience mixin.
+ * @function pushable
+ * @since 1.0.0
+ */
+@mixin pushable {
+	cursor: pointer;
+	user-select: none;
+}
+
+/**
+ * Convenience mixin to reset visibility and transform.
+ * @function hidden
+ * @since 1.0.0
+ */
+@mixin hidden() {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/**
+ * Convenience mixin to reset visibility and transform.
+ * @function reveal
+ * @since 1.0.0
+ */
+@mixin reveal() {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
+/**
+ * Convenience transition mixin.
+ * @function transition-property
+ * @since 1.0.0
+ */
+@mixin transition-property($args...) {
+
+	@if length($args)==0 {
+
+		transition-property: color, opacity, transform, visibility;
+
+	}
+
+	@else {
+
+		$items: ();
+
+		@each $value in $args {
+
+			@if $value==background {
+
+				$items: append($items, background-position, $separator: comma);
+				$items: append($items, background-color, $separator: comma);
+				$items: append($items, background-size, $separator: comma);
+
+			}
+
+			@else {
+
+				$items: append($items, $value, $separator: comma);
+
+			}
+		}
+
+		transition-property: $items;
+	}
+}
+
+/**
+ * Convenience transition mixin.
+ * @function transition-duration
+ * @since 1.0.0
+ */
+@mixin transition-duration($args...) {
+
+	$items: ();
+	$index: 1;
+	$limit: length($args);
+
+	@while $index <=$limit {
+
+		$val: nth-if($args, $index + 0);
+		$mul: nth-if($args, $index + 1);
+		$off: nth-if($args, $index + 2);
+
+		$tval: type-of($val);
+		$tmul: type-of($mul);
+		$toff: type-of($off);
+
+		$umul: if($tmul==number, unit($mul), null);
+		$uoff: if($toff==number, unit($off), null);
+
+		$value: null;
+
+		@if $tval==string and $tmul==number and $toff==number and $umul==''and $uoff=='' {
+
+			$value: transition-duration($val, $mul, $off);
+			$index: $index + 3;
+
+		}
+
+		@else if $tval==string and $tmul==number and $umul=='' {
+
+			$value: transition-duration($val, $mul);
+			$index: $index + 2;
+
+		}
+
+		@else if $tval==string {
+
+			$value: transition-duration($val);
+			$index: $index + 1;
+
+		}
+
+		@else if $tval==number {
+
+			$value: $val;
+			$index: $index + 1;
+
+		}
+
+		@else {
+
+			@error "Invalid format.";
+
+		}
+
+		$items: append($items, $value, $separator: comma);
+	}
+
+	transition-duration: $items;
+}
+
+/**
+ * Convenience transition mixin.
+ * @function transition-equation
+ * @since 1.0.0
+ */
+@mixin transition-equation($args...) {
+
+	$items: ();
+	$index: 1;
+	$limit: length($args);
+
+	@while $index <=$limit {
+
+		$val: nth-if($args, $index + 0);
+		$mul: nth-if($args, $index + 1);
+		$off: nth-if($args, $index + 2);
+
+		$tval: type-of($val);
+		$tmul: type-of($mul);
+		$toff: type-of($off);
+
+		$umul: if($tmul==number, unit($mul), null);
+		$uoff: if($toff==number, unit($off), null);
+
+		$value: null;
+
+		@if $tval==number {
+
+			$value: $val;
+			$index: $index + 1;
+
+		}
+
+		@else if $tval==string and $tmul==number and $toff==number and $umul==''and $uoff=='' {
+
+			$value: transition-equation($val, $mul, $off);
+			$index: $index + 3;
+
+		}
+
+		@else if $tval==string and $tmul==number and $umul=='' {
+
+			$value: transition-equation($val, $mul);
+			$index: $index + 2;
+
+		}
+
+		@else if $tval==string {
+
+			$value: transition-equation($val);
+			$index: $index + 1;
+
+		}
+
+		@else {
+
+			@error "Invalid format.";
+
+		}
+
+		$items: append($items, $value, $separator: comma);
+	}
+
+	transition-timing-function: $items;
+}
+
+/**
+ * Convenience transition mixin.
+ * @function transition-delay
+ * @since 1.0.0
+ */
+@mixin transition-delay($args...) {
+
+	$items: ();
+	$index: 1;
+	$limit: length($args);
+
+	@while $index <=$limit {
+
+		$val: nth-if($args, $index + 0);
+		$mul: nth-if($args, $index + 1);
+		$off: nth-if($args, $index + 2);
+
+		$tval: type-of($val);
+		$tmul: type-of($mul);
+		$toff: type-of($off);
+
+		$umul: if($tmul==number, unit($mul), null);
+		$uoff: if($toff==number, unit($off), null);
+
+		$value: null;
+
+		@if $tval==number {
+
+			$value: $val;
+			$index: $index + 1;
+
+		}
+
+		@else if $tval==string and $tmul==number and $toff==number and $umul==''and $uoff=='' {
+
+			$value: transition-delay($val, $mul, $off);
+			$index: $index + 3;
+
+		}
+
+		@else if $tval==string and $tmul==number and $umul=='' {
+
+			$value: transition-delay($val, $mul);
+			$index: $index + 2;
+
+		}
+
+		@else if $tval==string {
+
+			$value: transition-delay($val);
+			$index: $index + 1;
+
+		}
+
+		@else {
+
+			@error "Invalid format.";
+
+		}
+
+		$items: append($items, $value, $separator: comma);
+	}
+
+	transition-delay: $items;
+}
+
+/**
+ * Convenience before mixin;
+ * @function before
+ * @since 1.0.0
+ */
+@mixin before {
+	&:before {
+		content: '';
+		display: block;
+		@content;
+	}
+}
+
+/**
+ * Convenience before mixin;
+ * @function before
+ * @since 1.0.0
+ */
+@mixin after {
+	&:after {
+		content: '';
+		display: block;
+		@content;
+	}
+}
+
+/**
+ * Convenience asset path function
+ * @function asset
+ * @since 1.0.0
+ */
+@function asset($path) {
+	@return url('../../../'+ $path);
+}
+
+//------------------------------------------------------------------------------
+// Private API
+//------------------------------------------------------------------------------
+
+/**
+ * @mixin position
+ * @since 1.0.0
+ * @hidden
+ */
+@mixin position($position, $args: ()) {
+
+	$offsets: top right bottom left;
+
+	position: $position;
+
+	@each $offset in $offsets {
+
+		$index: index($args, $offset);
+
+		@if $index {
+
+			@if $index==length($args) {
+				#{$offset}: 0;
+			}
+
+			@else {
+
+				$next: nth($args, $index + 1);
+
+				@if is-valid-length($next) {
+					#{$offset}: $next;
+				}
+
+				@else if index($offsets, $next) {
+					#{$offset}: 0;
+				}
+
+				@else {
+					@warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+				}
+
+			}
+		}
+	}
+}
+
+/**
+ * @function is-valid-length
+ * @since 1.0.0
+ * @hidden
+ */
+@function is-valid-length($value) {
+	@return (type-of($value)=="number"and not unitless($value)) or (index(auto initial inherit 0, $value) !=false);
+}
+
+/**
+ * @function nth-if
+ * @since 1.0.0
+ * @hidden
+ */
+@function nth-if($list, $index) {
+
+	@if $index <=length($list) {
+		@return nth($list, $index);
+	}
+
+	@return null;
+}

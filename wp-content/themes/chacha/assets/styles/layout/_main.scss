@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------------
+// Container
+//------------------------------------------------------------------------------
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 98%;
+
+	&.boxed {
+		max-width: var(--container-width);
+	}
+}
+
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+	* {
+		box-sizing: border-box;
+	}
+
+	*:not(ul, li, ol) {
+		margin: 0;
+		padding: 0;
+	}
+
+	p+p {
+		margin-top: 1em;
+	}
+}

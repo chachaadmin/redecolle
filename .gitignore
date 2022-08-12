@@ -21,3 +21,14 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+environment-config.json
+.vscode/sftp.json
+build/
+package-lock.json
+blocks/
+dist
+.DS_Store
+**/assets/css/all.css
+**/assets/js/all.js
+**/chacha-gutenberg/assets
+theme.json
