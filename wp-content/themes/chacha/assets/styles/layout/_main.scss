@@ -18,7 +18,7 @@ body:not(.wp-admin),
 		box-sizing: border-box;
 	}
 
-	*:not(ul, li, ol) {
+	*:not(ul, li, ol, .container) {
 		margin: 0;
 		padding: 0;
 	}

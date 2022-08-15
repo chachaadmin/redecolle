@@ -1,0 +1,6 @@
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+    svg {
+        display: block;
+    }
+}

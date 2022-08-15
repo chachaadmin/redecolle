@@ -1,0 +1,24 @@
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+    .button {
+        line-height: 64px;
+        height: 64px;
+        background: var(--wp--preset--color--orange);
+        color: var(--wp--preset--color--white);
+        border-radius: 32px;
+        padding: 0 19px !important;
+        border: 2px solid var(--wp--preset--color--orange);
+        border-color: var(--wp--preset--color--orange) !important;
+
+        font-family: Montserrat;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            background: transparent;
+            color: var(--wp--preset--color--orange);
+        }
+    }
+}

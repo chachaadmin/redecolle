@@ -14,7 +14,6 @@ import './plugins/jquery-slider'
 import './plugins/jquery-break-lines'
 import './plugins/jquery-break-words'
 import './main-layout'
-import './image'
 import './video'
 
 jQuery.defineMedia('xxxl', 1920)
