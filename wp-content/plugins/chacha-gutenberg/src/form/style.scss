@@ -1,0 +1,22 @@
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+    .wp-block-chacha-gutenberg-form {
+        padding: 130px 0 100px !important;
+
+        .container {
+            max-width: 882px;
+
+            .content {
+                margin: 0 0 50px;
+
+                h2 {
+                    margin: 0 0 40px !important;
+                }
+
+                .form-content {
+                    max-width: 416px;
+                }
+            }
+        }
+    }
+}

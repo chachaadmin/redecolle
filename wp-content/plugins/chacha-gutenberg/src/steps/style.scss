@@ -1,0 +1,102 @@
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+    .wp-block-chacha-gutenberg-steps {
+        position: relative;
+        padding: 140px 0 !important;
+        min-height: 100vh;
+
+        .background {
+            position: absolute;
+            inset: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            .left {
+                background: var(--wp--preset--color--fonce);
+                flex: 0 0 23.9%;
+                width: 23.9%;
+                max-width: 459px;
+            }
+
+            .right {
+                background: var(--wp--preset--color--mauve);
+                flex: 1;
+            }
+        }
+
+        .step-item {
+            gap: 50px;
+
+            &:not(:first-child) {
+                margin: 50px 0 0 0;
+            }
+
+            .step-video {
+                position: relative;
+                flex: 0 0 419px;
+                width: 419px;
+                max-width: 100%;
+
+                .step-circle {
+                    position: absolute;
+                    width: 158%;
+                    border-radius: 100%;
+                    z-index: -1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        padding-bottom: 100%;
+                    }
+                }
+
+                .step-image {
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+
+                    svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .step-content {
+                flex: 1;
+
+                h2 {
+                    margin: 0 0 26px;
+                }
+
+                p {
+                    margin: 0 0 35px;
+                    max-width: 485px;
+                }
+            }
+
+            &.play {
+                video {
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

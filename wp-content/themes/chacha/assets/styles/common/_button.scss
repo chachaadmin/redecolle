@@ -3,6 +3,7 @@ body:not(.wp-admin),
     .button {
         line-height: 64px;
         height: 64px;
+        display: inline-block;
         background: var(--wp--preset--color--orange);
         color: var(--wp--preset--color--white);
         border-radius: 32px;
@@ -15,6 +16,7 @@ body:not(.wp-admin),
         letter-spacing: 0.03em;
         text-align: center;
         text-transform: uppercase;
+        text-decoration: none;
 
         &:hover {
             background: transparent;

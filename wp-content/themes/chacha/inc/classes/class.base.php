@@ -370,7 +370,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'body', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'body', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'body', 'line_height', 'option' ) / get_typography_field( 'body', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'body', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'body', 'letter_spacing', 'option' ) / get_typography_field( 'body', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'body', 'font_style', 'option' ) ?>;
         }
         body:not(.wp-admin) h1, body:not(.wp-admin) .h1,
@@ -379,7 +379,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'h1', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'h1', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'h1', 'line_height', 'option' ) / get_typography_field( 'h1', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'h1', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'h1', 'letter_spacing', 'option' ) / get_typography_field( 'h1', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'h1', 'font_style', 'option' ) ?>;
             text-transform: <?= get_typography_field( 'h1', 'text_transform', 'option' ) ?>;
         }
@@ -389,7 +389,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'h2', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'h2', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'h2', 'line_height', 'option' ) / get_typography_field( 'h2', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'h2', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'h2', 'letter_spacing', 'option' ) / get_typography_field( 'h2', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'h2', 'font_style', 'option' ) ?>;
             text-transform: <?= get_typography_field( 'h2', 'text_transform', 'option' ) ?>;
         }
@@ -399,7 +399,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'h3', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'h3', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'h3', 'line_height', 'option' ) / get_typography_field( 'h3', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'h3', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'h3', 'letter_spacing', 'option' ) / get_typography_field( 'h3', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'h3', 'font_style', 'option' ) ?>;
             text-transform: <?= get_typography_field( 'h3', 'text_transform', 'option' ) ?>;
         }
@@ -409,7 +409,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'h4', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'h4', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'h4', 'line_height', 'option' ) / get_typography_field( 'h4', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'h4', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'h4', 'letter_spacing', 'option' ) / get_typography_field( 'h4', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'h4', 'font_style', 'option' ) ?>;
             text-transform: <?= get_typography_field( 'h4', 'text_transform', 'option' ) ?>;
         }
@@ -419,7 +419,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'h5', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'h5', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'h5', 'line_height', 'option' ) / get_typography_field( 'h5', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'h5', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'h5', 'letter_spacing', 'option' ) / get_typography_field( 'h5', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'h5', 'font_style', 'option' ) ?>;
             text-transform: <?= get_typography_field( 'h5', 'text_transform', 'option' ) ?>;
         }
@@ -429,7 +429,7 @@ class CHACHA_BASE{
             font-size: <?= get_typography_field( 'h6', 'font_size', 'option' ) ?>px;
             font-weight: <?= get_typography_field( 'h6', 'font_weight', 'option' ) ?>;
             line-height: <?= get_typography_field( 'h6', 'line_height', 'option' ) / get_typography_field( 'h6', 'font_size', 'option' ) ?>em;
-            letter-spacing: <?= get_typography_field( 'h6', 'letter_spacing', 'option' ) ?>;
+            letter-spacing: <?= get_typography_field( 'h6', 'letter_spacing', 'option' ) / get_typography_field( 'h6', 'font_size', 'option' ) ?>em;
             font-style: <?= get_typography_field( 'h6', 'font_style', 'option' ) ?>;
             text-transform: <?= get_typography_field( 'h6', 'text_transform', 'option' ) ?>;
         }

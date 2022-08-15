@@ -9,13 +9,9 @@ export default function Save(props) {
 
     // Add classes to the section container
     const notDefined = (typeof props.className === 'undefined' || !props.className) ? true : false
-
-    let attributesCopy = { ...attributes };
-    delete attributesCopy.sectionId;
-
     const blockProps = useBlockProps.save({
         className: notDefined ? `block-${attributes.sectionId}` : `${props.className}`,
-        'data-attributes': JSON.stringify(attributesCopy)
+        'data-attributes': JSON.stringify(attributes)
     });
 
     return (
