@@ -446,7 +446,7 @@ class CHACHA_BASE{
         if( class_exists('ACF') ){
             acf_add_options_page(array(
                 'page_title' 	=> __( 'Paramètres généraux du thème', 'chacha' ),
-                'menu_title'	=> __( 'Réglage du thème', 'chacha' ),
+                'menu_title'	=> __( 'Réglages du thème', 'chacha' ),
                 'menu_slug' 	=> 'theme-general-settings',
                 'capability'	=> 'manage_options',
                 'redirect'		=> false

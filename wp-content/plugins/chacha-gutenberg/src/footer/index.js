@@ -1,6 +1,5 @@
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
-import { withSelect } from '@wordpress/data';
 
 import './style.scss';
 
@@ -9,7 +8,7 @@ import Save from './save';
 
 registerBlockType('chacha-gutenberg/footer', {
     apiVersion: 2,
-    title: __('footer', 'chacha-gutenberg'),
+    title: __('Footer', 'chacha-gutenberg'),
     icon: 'universal-access-alt',
     category: 'chacha',
     attributes: {
@@ -17,9 +16,6 @@ registerBlockType('chacha-gutenberg/footer', {
             type: 'string'
         }
     },
-    edit: withSelect((select, props) => {
-
-        return {};
-    })(Edit),
+    edit: Edit,
     save: Save,
 });

@@ -14,7 +14,7 @@ export default function Save(props) {
     delete attributesCopy.sectionId;
 
     const blockProps = useBlockProps.save({
-        className: notDefined ? `block-${attributes.sectionId}` : `${props.className}`,
+        className: notDefined ? `block-${attributes.sectionId} has-fonce-background-color` : `${props.className}`,
         'data-attributes': JSON.stringify(attributesCopy)
     });
 
