@@ -1,0 +1,78 @@
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+    .gform_wrapper {
+        .gform_title {
+            font-size: 21px;
+            margin: 0 0 43px !important;
+        }
+
+        .gfield_required {
+            display: none !important;
+        }
+
+        .gfield_label {
+            font-weight: 400;
+            font-size: 21px;
+            letter-spacing: 0.05em;
+            line-height: 1.286em;
+            color: var(--wp--preset--color--fonce);
+        }
+
+        .ginput_container_text,
+        .ginput_container_phone,
+        .ginput_container_email,
+        .ginput_container_select {
+
+            input,
+            select {
+                line-height: 75px;
+                height: 75px;
+                font-weight: 400;
+                border: none;
+                outline: none;
+                font-size: 21px;
+                color: var(--wp--preset--color--fonce);
+                padding: 0 0 0 26px !important;
+            }
+        }
+
+        .ginput_container_select {
+
+            position: relative;
+
+            &:after {
+                background-image: url('../images/chevron.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 46px;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 13px;
+            }
+
+            select {
+                -moz-appearance: none;
+                /* Firefox */
+                -webkit-appearance: none;
+                /* Safari and Chrome */
+                appearance: none;
+            }
+        }
+
+        .gform_fields {
+            grid-row-gap: 48px !important;
+        }
+
+        .gform_button {
+            font-weight: 800;
+        }
+
+        .gform_footer {
+            justify-content: flex-end;
+            margin: 61px 0 0 0 !important;
+        }
+    }
+}
