@@ -5,26 +5,19 @@ body:not(.wp-admin),
         position: relative;
         flex-wrap: wrap;
 
-        @media all and (min-width: 768px) {
-            height: 1px;
-        }
-
         .logo {
-            position: absolute;
-            top: 30px;
-            left: 28px;
+            padding: 30px 0 0 28px;
 
             svg {
                 max-width: 100%;
-                min-width: 434px;
+                width: 434px;
             }
 
-            @media all and (max-width: 767px) {
-                position: static;
+            @media all and (max-width: 1023px) {
                 width: 100%;
                 flex: 0 0 100%;
                 padding: 0 36px;
-                margin: 14px 0 37px !important;
+                padding: 14px 0 37px !important;
             }
 
             @media all and (max-width: 340px) {
@@ -35,7 +28,7 @@ body:not(.wp-admin),
         .container {
             height: 100%;
 
-            @media all and (max-width: 767px) {
+            @media all and (max-width: 1023px) {
                 height: auto;
                 flex-wrap: wrap;
             }
@@ -47,6 +40,10 @@ body:not(.wp-admin),
                     max-width: 1000px;
                     margin: 0 0 21px;
 
+                    @media all and (max-width: 1340px) {
+                        font-size: 5.6vw;
+                    }
+
                     @media all and (max-width: 767px) {
                         font-size: 35px;
                     }
@@ -55,7 +52,7 @@ body:not(.wp-admin),
                 .content-home {
                     max-width: 522px;
 
-                    @media all and (max-width: 767px) {
+                    @media all and (max-width: 1100px) {
                         font-size: 19px;
                     }
                 }
@@ -65,7 +62,7 @@ body:not(.wp-admin),
                     margin: 0 0 32px;
                 }
 
-                @media all and (max-width: 767px) {
+                @media all and (max-width: 1023px) {
                     svg:last-child {
                         display: none;
                     }
@@ -77,11 +74,11 @@ body:not(.wp-admin),
 
                 video {
                     display: block;
-                    width: 100%;
+                    max-width: 100%;
                 }
             }
 
-            @media all and (max-width: 767px) {
+            @media all and (max-width: 1023px) {
 
                 &,
                 >* {
