@@ -5,6 +5,11 @@ body:not(.wp-admin),
         padding: 140px 0 !important;
         min-height: 100vh;
 
+        @media all and (max-width: 767px) {
+
+            padding: 0 !important;
+        }
+
         .background {
             position: absolute;
             inset: 0;
@@ -25,13 +30,50 @@ body:not(.wp-admin),
                 background: var(--wp--preset--color--mauve);
                 flex: 1;
             }
+
+            @media all and (max-width: 767px) {
+
+                display: none;
+            }
+        }
+
+        .container {
+            @media all and (max-width: 767px) {
+                max-width: none;
+                width: 100%;
+                flex: 0 0 100%;
+                padding: 0 !important;
+            }
         }
 
         .step-item {
             gap: 50px;
 
+            @media all and (max-width: 767px) {
+
+                gap: 0;
+                flex-wrap: wrap;
+                padding: 36px !important;
+
+                &:nth-child(even) {
+                    background: var(--wp--preset--color--fonce);
+                }
+
+                &:nth-child(odd) {
+                    background: var(--wp--preset--color--mauve);
+                }
+            }
+
+            @media all and (max-width: 340px) {
+                padding: 36px 20px !important;
+            }
+
             &:not(:first-child) {
                 margin: 50px 0 0 0;
+
+                @media all and (max-width: 767px) {
+                    margin: 0;
+                }
             }
 
             .step-video {
@@ -54,6 +96,11 @@ body:not(.wp-admin),
                         display: block;
                         padding-bottom: 100%;
                     }
+
+                    @media all and (max-width: 767px) {
+
+                        display: none;
+                    }
                 }
 
                 .step-image {
@@ -67,6 +114,11 @@ body:not(.wp-admin),
                         left: 50%;
                         transform: translate(-50%, -50%);
                     }
+
+                    img {
+                        max-width: 100%;
+                        display: block;
+                    }
                 }
 
                 video {
@@ -76,6 +128,11 @@ body:not(.wp-admin),
                     z-index: 0;
                     max-width: 100%;
                     height: auto;
+                    display: block;
+                }
+
+                @media all and (max-width: 767px) {
+                    margin: 0 0 21px !important;
                 }
             }
 
@@ -85,11 +142,19 @@ body:not(.wp-admin),
 
                 h2 {
                     margin: 0 0 26px;
+
+                    @media all and (max-width: 767px) {
+                        font-size: 26px;
+                    }
                 }
 
                 p {
                     margin: 0 0 35px;
                     max-width: 485px;
+
+                    @media all and (max-width: 767px) {
+                        font-size: 19px;
+                    }
                 }
             }
 

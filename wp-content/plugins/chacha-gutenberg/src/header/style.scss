@@ -2,17 +2,42 @@ body:not(.wp-admin),
 .block-editor-block-list__layout {
     .wp-block-chacha-gutenberg-header {
         min-height: 100vh;
-        height: 1px;
         position: relative;
+        flex-wrap: wrap;
+
+        @media all and (min-width: 768px) {
+            height: 1px;
+        }
 
         .logo {
             position: absolute;
             top: 30px;
             left: 28px;
+
+            svg {
+                max-width: 100%;
+            }
+
+            @media all and (max-width: 767px) {
+                position: static;
+                width: 100%;
+                flex: 0 0 100%;
+                padding: 0 36px;
+                margin: 14px 0 37px !important;
+            }
+
+            @media all and (max-width: 340px) {
+                padding: 0 20px !important;
+            }
         }
 
         .container {
             height: 100%;
+            flex-wrap: wrap;
+
+            @media all and (max-width: 767px) {
+                height: auto;
+            }
 
             .column-1 {
                 flex: 1;
@@ -20,15 +45,29 @@ body:not(.wp-admin),
                 .title-home {
                     max-width: 1000px;
                     margin: 0 0 21px;
+
+                    @media all and (max-width: 767px) {
+                        font-size: 35px;
+                    }
                 }
 
                 .content-home {
                     max-width: 522px;
+
+                    @media all and (max-width: 767px) {
+                        font-size: 19px;
+                    }
                 }
 
                 .content-home,
                 .button {
                     margin: 0 0 32px;
+                }
+
+                @media all and (max-width: 767px) {
+                    svg:last-child {
+                        display: none;
+                    }
                 }
             }
 
@@ -37,6 +76,16 @@ body:not(.wp-admin),
 
                 video {
                     display: block;
+                    width: 100%;
+                }
+            }
+
+            @media all and (max-width: 767px) {
+
+                &,
+                >* {
+                    flex: 0 0 100% !important;
+                    width: 100% !important;
                 }
             }
         }

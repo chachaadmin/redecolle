@@ -3,14 +3,30 @@
         padding: 95px 0 57px !important;
         gap: 174px;
 
+        @media all and (max-width: 767px) {
+            padding: 26px 36px 32px !important;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        @media all and (max-width: 340px) {
+            padding: 26px 20px 32px !important;
+        }
+
         >.column-1 {
             flex: 1;
+
+            @media all and (max-width: 767px) {
+                margin: 0 0 63px;
+            }
 
             .logo:first-child {
                 margin-bottom: 24px !important;
 
                 svg {
                     max-width: 292px;
+                    width: 100%;
+                    display: block;
                 }
             }
 
@@ -19,6 +35,8 @@
 
                 svg {
                     max-width: 215px;
+                    width: 100%;
+                    display: block;
                 }
             }
         }
@@ -27,9 +45,19 @@
             flex: 2;
             flex-wrap: wrap;
 
+
             .address-item {
                 flex: 0 0 50%;
                 width: 50%;
+
+                @media all and (max-width: 767px) {
+                    flex: 0 0 100%;
+                    width: 100%;
+
+                    &:not(:first-child) {
+                        margin: 32px 0 0;
+                    }
+                }
 
                 h2 {
                     font-size: 18px;
@@ -56,15 +84,33 @@
     .container:last-child {
         padding: 20px 0;
         gap: 20px;
+        flex-wrap: wrap;
+
+        @media all and (max-width: 767px) {
+            padding: 0 0 30px;
+            gap: 0;
+        }
 
         p,
         a {
             font-weight: 400;
             font-size: 13px;
+            line-height: 1.23em;
 
             a {
                 color: #fff;
                 text-decoration: none;
+
+                @media all and (max-width: 767px) {
+                    display: block;
+                    margin: 1em 0 0 0;
+                }
+            }
+
+            span {
+                @media all and (max-width: 767px) {
+                    display: none;
+                }
             }
         }
     }

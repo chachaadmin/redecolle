@@ -4,6 +4,11 @@ body:not(.wp-admin),
         .gform_title {
             font-size: 21px;
             margin: 0 0 43px !important;
+
+            @media all and (max-width: 767px) {
+                margin: 0 0 26px !important;
+                font-size: 18px;
+            }
         }
 
         .gfield_required {
@@ -16,6 +21,10 @@ body:not(.wp-admin),
             letter-spacing: 0.05em;
             line-height: 1.286em;
             color: var(--wp--preset--color--fonce);
+
+            @media all and (max-width: 767px) {
+                font-size: 19px;
+            }
         }
 
         .ginput_container_text,
@@ -33,6 +42,25 @@ body:not(.wp-admin),
                 font-size: 21px;
                 color: var(--wp--preset--color--fonce);
                 padding: 0 0 0 26px !important;
+
+                @media all and (max-width: 767px) {
+                    padding: 0 0 0 19px !important;
+                    font-size: 19px;
+                }
+            }
+
+            @media all and (max-width: 767px) {
+
+                input {
+                    line-height: 50px;
+                    height: 50px;
+                }
+
+                select {
+                    line-height: 1em;
+                    white-space: break-spaces;
+                    padding-right: 48px !important;
+                }
             }
         }
 
@@ -51,6 +79,10 @@ body:not(.wp-admin),
                 transform: translateY(-50%);
                 width: 24px;
                 height: 13px;
+
+                @media all and (max-width: 767px) {
+                    right: 29px;
+                }
             }
 
             select {
@@ -64,6 +96,10 @@ body:not(.wp-admin),
 
         .gform_fields {
             grid-row-gap: 48px !important;
+
+            @media all and (max-width: 767px) {
+                grid-row-gap: 37px !important;
+            }
         }
 
         .gform_button {

@@ -3,18 +3,35 @@ body:not(.wp-admin),
     .wp-block-chacha-gutenberg-form {
         padding: 130px 0 100px !important;
 
+        @media all and (max-width: 767px) {
+            padding: 40px 0 !important;
+        }
+
         .container {
             max-width: 882px;
 
             .content {
                 margin: 0 0 50px;
 
+                @media all and (max-width: 767px) {
+                    margin: 0 0 26px !important;
+                }
+
                 h2 {
                     margin: 0 0 40px !important;
+
+                    @media all and (max-width: 767px) {
+                        font-size: 26px;
+                        margin: 0 0 26px !important;
+                    }
                 }
 
                 .form-content {
                     max-width: 416px;
+
+                    @media all and (max-width: 767px) {
+                        font-size: 19px;
+                    }
                 }
             }
         }
