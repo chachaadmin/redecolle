@@ -47,11 +47,11 @@ export default function Steps(props) {
             </div>
             <div className="container boxed">
                 {props.data?.length > 0 &&
-                    props.data?.map(function (item) {
-                        return <div className="step-item chacha-row valign-center">
+                    props.data?.map(function (item, index) {
+                        return <div className="step-item chacha-row valign-center" key={index}>
                             <div className="step-video">
                                 <div className="step-circle" style={{ backgroundColor: item.fields.step_color }}></div>
-                                <video controlslist="nodownload" playsinline="true">
+                                <video controlsList="nodownload" playsInline={true}>
                                     <source src={item.fields.step_video} type="video/mp4" />
                                 </video>
                                 <div className="step-image">

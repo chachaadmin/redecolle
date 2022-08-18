@@ -25,6 +25,7 @@ registerBlockType('chacha-gutenberg/form', {
         }
     },
     supports: {
+        anchor: true,
         color: {
             background: true,
             gradient: false,

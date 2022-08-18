@@ -26,6 +26,11 @@ class CHACHA_GUTENBERG_ROUTE{
             'callback' => [$this, 'get_option_fields'],
             'permission_callback' => '__return_true'
         ]);
+        register_rest_route('chachagutenberg/v1', '/get_all_options', [
+            'method' => 'GET',
+            'callback' => [$this, 'get_all_options_fields'],
+            'permission_callback' => '__return_true'
+        ]);
         //Return data like all from specific post type or from a specifc post
         register_rest_route('chachagutenberg/v1', '/get_data_with_params/(?P<type>[\S]+)/(?P<limit>[\S]+)/(?P<orderby>[\S]+)/(?P<order>[\S]+)', [
             'method' => 'GET',
@@ -122,6 +127,14 @@ class CHACHA_GUTENBERG_ROUTE{
         }
         else $return['value'] = get_field( $params['field'], 'option' );
         return rest_ensure_response($return);
+    }
+
+    /**
+     * Return the custom fields (ACF) for option
+     */
+    public function get_all_options_fields($request){
+
+        return rest_ensure_response(get_fields('option'));
     }
 
     /**

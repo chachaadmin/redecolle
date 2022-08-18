@@ -22,7 +22,11 @@ registerBlockType('chacha-gutenberg/header', {
         content: {
             type: 'string',
             default: '<p>Au CÉA des Sommets, tu crées ton horaire sur mesure et tu avances à ton rythme. Découvre à quoi ressemble un parcours avec nous!</p>'
-        }
+        },
+        video: {
+            type: 'string',
+            default: 'https://chacha-communications.s3.ca-central-1.amazonaws.com/Test_419x745.mp4'
+        },
     },
     supports: {
         color: {

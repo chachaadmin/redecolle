@@ -11,15 +11,9 @@ export default function loadFooter() {
     document.querySelectorAll('.wp-block-chacha-gutenberg-footer').forEach(function (block) {
 
         wp.apiFetch({
-            path: `chachagutenberg/v1/get_option/addresses/test/test/test`,
+            path: `chachagutenberg/v1/get_all_options`,
         }).then(data => {
-            console.log(data);
-            wp.apiFetch({
-                path: `chachagutenberg/v1/get_option/copyright/test/test/test`,
-            }).then(data => {
-                console.log(data);
-                loadVisual(block, data);
-            });
+            loadVisual(block, data);
         });
     });
 }

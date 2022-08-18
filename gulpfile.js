@@ -56,7 +56,8 @@ var globs_watch_theme = [
 // Files to watch to compile the blocks in the plugin
 var globs_build = [
     'wp-content/plugins/chacha-gutenberg/src/**/*.js',
-    'wp-content/plugins/chacha-gutenberg/src/**/*.scss'
+    'wp-content/plugins/chacha-gutenberg/src/**/*.scss',
+    'wp-content/plugins/chacha-gutenberg/src/**/*.jsx',
 ];
 
 // Files to watch to compile the blocks components in the plugin

@@ -1,0 +1,9 @@
+body:not(.wp-admin),
+.block-editor-block-list__layout {
+    .wp-block-chacha-gutenberg-steps {
+
+        .background {
+            z-index: 0;
+        }
+    }
+}
