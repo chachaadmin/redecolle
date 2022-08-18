@@ -79,6 +79,7 @@ body:not(.wp-admin),
                 transform: translateY(-50%);
                 width: 24px;
                 height: 13px;
+                pointer-events: none;
 
                 @media all and (max-width: 767px) {
                     right: 29px;

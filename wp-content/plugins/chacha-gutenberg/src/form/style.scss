@@ -20,6 +20,10 @@ body:not(.wp-admin),
                 h2 {
                     margin: 0 0 40px !important;
 
+                    @media all and (max-width: 1650px) {
+                        font-size: 4vw;
+                    }
+
                     @media all and (max-width: 767px) {
                         font-size: 26px;
                         margin: 0 0 26px !important;

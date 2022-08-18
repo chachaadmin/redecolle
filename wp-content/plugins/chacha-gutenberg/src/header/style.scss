@@ -16,21 +16,18 @@ body:not(.wp-admin),
             @media all and (max-width: 1023px) {
                 width: 100%;
                 flex: 0 0 100%;
-                padding: 0 36px;
                 padding: 14px 0 37px !important;
-            }
-
-            @media all and (max-width: 340px) {
-                padding: 0 20px !important;
             }
         }
 
         .container {
             height: 100%;
+            gap: 36px;
 
             @media all and (max-width: 1023px) {
                 height: auto;
                 flex-wrap: wrap;
+                gap: 0px;
             }
 
             .column-1 {
@@ -40,8 +37,8 @@ body:not(.wp-admin),
                     max-width: 1000px;
                     margin: 0 0 21px;
 
-                    @media all and (max-width: 1340px) {
-                        font-size: 5.6vw;
+                    @media all and (max-width: 1650px) {
+                        font-size: 4vw;
                     }
 
                     @media all and (max-width: 767px) {

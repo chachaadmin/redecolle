@@ -1,10 +1,10 @@
 .wp-block-chacha-gutenberg-footer {
     .container:first-child {
         padding: 95px 0 57px !important;
-        gap: 174px;
+        gap: 9vw;
 
-        @media all and (max-width: 767px) {
-            padding: 26px 36px 32px !important;
+        @media all and (max-width: 1150px) {
+            padding: 26px 0 32px !important;
             flex-wrap: wrap;
             gap: 0;
         }
@@ -16,7 +16,7 @@
         >.column-1 {
             flex: 1;
 
-            @media all and (max-width: 767px) {
+            @media all and (max-width: 1150px) {
                 margin: 0 0 63px;
             }
 
@@ -49,6 +49,7 @@
             .address-item {
                 flex: 0 0 50%;
                 width: 50%;
+                margin: 0 0 32px;
 
                 @media all and (max-width: 767px) {
                     flex: 0 0 100%;
@@ -77,6 +78,13 @@
                         text-decoration: none;
                     }
                 }
+            }
+        }
+
+        @media all and (max-width: 1150px) {
+            >* {
+                flex: 0 0 100% !important;
+                width: 100%;
             }
         }
     }
