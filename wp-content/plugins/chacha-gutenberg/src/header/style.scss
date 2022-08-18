@@ -16,6 +16,7 @@ body:not(.wp-admin),
 
             svg {
                 max-width: 100%;
+                min-width: 434px;
             }
 
             @media all and (max-width: 767px) {
@@ -33,10 +34,10 @@ body:not(.wp-admin),
 
         .container {
             height: 100%;
-            flex-wrap: wrap;
 
             @media all and (max-width: 767px) {
                 height: auto;
+                flex-wrap: wrap;
             }
 
             .column-1 {
