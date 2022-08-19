@@ -51,7 +51,7 @@ export default function Steps(props) {
                         return <div className="step-item chacha-row valign-center" key={index}>
                             <div className="step-video">
                                 <div className="step-circle" style={{ backgroundColor: item.fields.step_color }}></div>
-                                <video controlsList="nodownload" playsInline={true}>
+                                <video controlsList="nodownload" playsInline={true} controls>
                                     <source src={item.fields.step_video} type="video/mp4" />
                                 </video>
                                 <div className="step-image">

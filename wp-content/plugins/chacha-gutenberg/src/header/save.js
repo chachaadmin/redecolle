@@ -19,6 +19,6 @@ export default function Save(props) {
     });
 
     return (
-        <section {...blockProps}></section>
+        <section {...blockProps} data-watch></section>
     );
 };

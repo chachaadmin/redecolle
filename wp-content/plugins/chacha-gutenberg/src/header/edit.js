@@ -37,7 +37,7 @@ export default function Edit(props) {
 
     return (
         <Fragment>
-            <section {...blockProps}></section>
+            <section {...blockProps} data-watch></section>
             <InspectorControls>
                 <Panel header={__('Settings for this block', 'chacha-gutenberg')}>
                     <PanelBody
