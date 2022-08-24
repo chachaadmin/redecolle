@@ -28,6 +28,6 @@ export default function Edit(props) {
     });
 
     return (
-        <section {...blockProps}></section>
+        <section {...blockProps} data-watch></section>
     );
 };

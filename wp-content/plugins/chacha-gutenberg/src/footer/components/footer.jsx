@@ -97,7 +97,7 @@ export default function Footer(props) {
                     }
                 </div>
             </div>
-            <div className="container boxed chacha-row valign-center halign-between"><Copyright /></div>
+            <div className="container boxed chacha-row valign-center"><Copyright /></div>
         </>
     );
 }

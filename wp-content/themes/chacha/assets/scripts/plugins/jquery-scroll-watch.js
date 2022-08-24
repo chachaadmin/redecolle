@@ -31,7 +31,8 @@ function watch(i, element) {
 
 	let target = element.attr('data-watch')
 	if (target == '' ||
-		target == null) {
+		target == null ||
+		target == 'true') {
 		target = element
 	} else {
 		target = element.find(target)

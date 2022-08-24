@@ -37,6 +37,8 @@ export default function Steps(props) {
                 };
             });
         }
+
+        jQuery.attach.refresh()
     }, [])
 
     return (
@@ -50,7 +52,7 @@ export default function Steps(props) {
                     props.data?.map(function (item, index) {
                         return <div className="step-item chacha-row valign-center" key={index}>
                             <div className="step-video">
-                                <div className="step-circle" style={{ backgroundColor: item.fields.step_color }}></div>
+                                <div className="step-circle" style={{ backgroundColor: item.fields.step_color }} data-scroll-animation="width" data-scroll-animation-unit="%" data-scroll-animation-format="%v" data-scroll-animation-min="100" data-scroll-animation-max="158"></div>
                                 <video controlsList="nodownload" playsInline={true} controls>
                                     <source src={item.fields.step_video} type="video/mp4" />
                                 </video>

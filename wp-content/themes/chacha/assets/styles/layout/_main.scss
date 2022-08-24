@@ -26,10 +26,14 @@ section[class^="wp-block-chacha-gutenberg-"] {
 	}
 }
 
-body:not(.wp-admin),
+body:not(.wp-admin):not(.wp-customizer),
 .block-editor-block-list__layout {
 	* {
 		box-sizing: border-box;
+	}
+
+	svg text tspan {
+		font-size: inherit;
 	}
 
 	*:not(ul, li, ol, .container) {
@@ -39,5 +43,133 @@ body:not(.wp-admin),
 
 	p+p {
 		margin-top: 1em;
+	}
+
+	.main.privacy-policy {
+
+		.wp-block-post-title {
+			margin-top: 0.64em !important;
+
+			@media all and (max-width: 1650px) {
+				font-size: 4vw;
+			}
+
+			@media all and (max-width: 767px) {
+				font-size: 35px;
+			}
+		}
+
+		.container {
+			.wp-block-post-content {
+				color: var(--wp--preset--color--fonce);
+				margin-bottom: 200px;
+
+				@media all and (max-width: 767px) {
+					margin-bottom: 100px;
+				}
+
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					color: var(--wp--preset--color--white) !important;
+				}
+
+				h1 {
+					margin: 0 0 68px;
+
+					@media all and (max-width: 1650px) {
+						font-size: 4vw;
+					}
+
+					@media all and (max-width: 767px) {
+						font-size: 35px;
+					}
+				}
+
+				h2 {
+					font-weight: bold;
+					font-size: 28px;
+					letter-spacing: 0.05em;
+					margin: 28px 0 12px;
+				}
+
+				p,
+				ul,
+				ol {
+					font-weight: 400;
+					font-size: 21px;
+					letter-spacing: 0.05em;
+					line-height: 1.286em;
+					margin: 0 0 1em;
+				}
+
+				ul {
+					list-style: none;
+					padding: 0;
+				}
+
+				ol {
+					padding: 0 0 0 30px;
+
+					li {
+						padding: 0 0 0 10px;
+					}
+				}
+
+				ul,
+				ol {
+
+					li {
+
+						&::marker {
+							color: #fff;
+						}
+					}
+				}
+
+				ul {
+					li {
+						display: flex;
+						flex-flow: row nowrap;
+						align-items: flex-start;
+						gap: 17px;
+						margin: 0 0 6px;
+
+						&::before {
+							content: "\2022";
+							color: #fff;
+							font-weight: bold;
+							display: block;
+							font-size: 60px;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		.wp-block-privacy-policy {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+
+			.logo {
+				padding: 30px 0 0 28px;
+
+				svg {
+					max-width: 100%;
+					width: 434px;
+				}
+
+				@media all and (max-width: 1023px) {
+					width: 100%;
+					flex: 0 0 100%;
+					padding: 14px 0 37px !important;
+				}
+			}
+		}
 	}
 }

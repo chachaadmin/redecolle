@@ -1,3 +1,180 @@
+@-webkit-keyframes rotating45
+
+/* Safari and Chrome */
+    {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotating45 {
+    0% {
+        -ms-transform: srotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    50% {
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    100% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes scaling
+
+/* Safari and Chrome */
+    {
+    0% {
+        -webkit-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    50% {
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    100% {
+        -webkit-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+}
+
+@keyframes scaling {
+    0% {
+        -ms-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    50% {
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    100% {
+        -ms-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+}
+
+@-webkit-keyframes rotating
+
+/* Safari and Chrome */
+    {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0%, 0%);
+    }
+
+    25% {
+        transform: translate(5%, 15%);
+    }
+
+    50% {
+        transform: translate(10%, 5%);
+    }
+
+    75% {
+        transform: translate(0%, 15%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+
+    25% {
+        -webkit-transform: translate(5%, 15%);
+    }
+
+    50% {
+        -webkit-transform: translate(10%, 5%);
+    }
+
+    75% {
+        -webkit-transform: translate(0%, 15%);
+    }
+
+    100% {
+        -webkit-transform: translate(0%, 0%);
+    }
+}
+
 body:not(.wp-admin),
 .block-editor-block-list__layout {
     .wp-block-chacha-gutenberg-header {
@@ -75,6 +252,47 @@ body:not(.wp-admin),
 
                 svg {
                     display: block;
+                    overflow: visible;
+
+                    #Sourire {
+                        -webkit-animation: rotating 2s linear infinite;
+                        -moz-animation: rotating 2s linear infinite;
+                        -ms-animation: rotating 2s linear infinite;
+                        -o-animation: rotating 2s linear infinite;
+                        animation: rotating 2s linear infinite;
+                        transform-box: fill-box;
+                        transform-origin: center;
+                    }
+
+                    #Calculatrice {
+                        -webkit-animation: scaling 4s linear infinite;
+                        -moz-animation: scaling 4s linear infinite;
+                        -ms-animation: scaling 4s linear infinite;
+                        -o-animation: scaling 4s linear infinite;
+                        animation: scaling 4s linear infinite;
+                        transform-box: fill-box;
+                        transform-origin: center;
+                    }
+
+                    #Livre {
+                        -webkit-animation: rotating45 2s linear infinite;
+                        -moz-animation: rotating45 2s linear infinite;
+                        -ms-animation: rotating45 2s linear infinite;
+                        -o-animation: rotating45 2s linear infinite;
+                        animation: rotating45 2s linear infinite;
+                        transform-box: fill-box;
+                        transform-origin: center;
+                    }
+
+                    #Laptop {
+                        -webkit-animation: floating 4s linear infinite;
+                        -moz-animation: floating 4s linear infinite;
+                        -ms-animation: floating 4s linear infinite;
+                        -o-animation: floating 4s linear infinite;
+                        animation: floating 4s linear infinite;
+                        transform-box: fill-box;
+                        transform-origin: center;
+                    }
                 }
             }
 
