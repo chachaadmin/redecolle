@@ -26,10 +26,66 @@ section[class^="wp-block-chacha-gutenberg-"] {
 	}
 }
 
+@keyframes floating {
+	0% {
+		transform: translate(0%, 0%);
+	}
+
+	25% {
+		transform: translate(5%, 15%);
+	}
+
+	50% {
+		transform: translate(10%, 5%);
+	}
+
+	75% {
+		transform: translate(0%, 15%);
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translate(0%, 0%);
+	}
+
+	25% {
+		-webkit-transform: translate(5%, 15%);
+	}
+
+	50% {
+		-webkit-transform: translate(10%, 5%);
+	}
+
+	75% {
+		-webkit-transform: translate(0%, 15%);
+	}
+
+	100% {
+		-webkit-transform: translate(0%, 0%);
+	}
+}
+
 body:not(.wp-admin):not(.wp-customizer),
 .block-editor-block-list__layout {
 	* {
 		box-sizing: border-box;
+	}
+
+	.logo.primary {
+		svg {
+			-webkit-animation: floating 4s linear infinite;
+			-moz-animation: floating 4s linear infinite;
+			-ms-animation: floating 4s linear infinite;
+			-o-animation: floating 4s linear infinite;
+			animation: floating 4s linear infinite;
+			transform-box: fill-box;
+			transform-origin: center;
+		}
 	}
 
 	svg text tspan {

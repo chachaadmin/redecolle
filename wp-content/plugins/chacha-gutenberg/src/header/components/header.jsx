@@ -6,7 +6,7 @@ export default function Header(props) {
     let image = images[Math.floor(Math.random() * images.length)];
     return (
         <>
-            <div className="logo">
+            <div className="logo primary">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434 150">
                     <g id="Groupe_341" data-name="Groupe 341" transform="translate(-355.958 -141.939)">
                         <circle id="Ellipse_91" data-name="Ellipse 91" cx="35" cy="35" r="35" transform="translate(561.958 208.939)" fill="#fc5c38" />
