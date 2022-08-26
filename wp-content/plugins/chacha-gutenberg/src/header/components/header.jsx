@@ -73,9 +73,11 @@ export default function Header(props) {
                                 <text id="A-2" data-name="A" transform="translate(88.535 116.415) rotate(-31.483)" fill="#682d64" fontSize="15" fontFamily="Montserrat-Medium, Montserrat" fontWeight="500"><tspan x="0" y="0">A</tspan></text>
                                 <text id="T-2" data-name="T" transform="matrix(0.733, -0.68, 0.68, 0.733, 99.681, 109.19)" fill="#682d64" fontSize="15" fontFamily="Montserrat-Medium, Montserrat" fontWeight="500"><tspan x="0" y="0">T</tspan></text>
                             </g>
-                            <g id="Groupe_318" data-name="Groupe 318" transform="translate(2927.978 -1400.238) rotate(-45)">
-                                <path id="Tracé_330" data-name="Tracé 330" d="M-3081.565,272.215v26.579h25.836" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
-                                <path id="Tracé_331" data-name="Tracé 331" d="M-3081.565,298.795l23.194-23.194" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="4" />
+                            <g id="Fleche_blanche" data-name="Groupe 318" transform="translate(2927.978 -1400.238) rotate(-45)">
+                                <g>
+                                    <path id="Tracé_330" data-name="Tracé 330" d="M-3081.565,272.215v26.579h25.836" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
+                                    <path id="Tracé_331" data-name="Tracé 331" d="M-3081.565,298.795l23.194-23.194" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="4" />
+                                </g>
                             </g>
                         </g>
                     </svg>

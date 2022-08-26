@@ -175,6 +175,42 @@
     }
 }
 
+@keyframes rebound {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    33% {
+        transform: translate(-5%, 5%);
+    }
+
+    66% {
+        transform: translate(5%, -5%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes rebound {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    33% {
+        -webkit-transform: translate(-5%, 5%);
+    }
+
+    66% {
+        -webkit-transform: translate(5%, -5%);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
 body:not(.wp-admin),
 .block-editor-block-list__layout {
     .wp-block-chacha-gutenberg-header {
@@ -235,6 +271,18 @@ body:not(.wp-admin),
                 .content-home,
                 .button {
                     margin: 0 0 32px;
+                }
+
+                svg {
+                    #Fleche_blanche>g {
+                        -webkit-animation: rebound 2s linear infinite;
+                        -moz-animation: rebound 2s linear infinite;
+                        -ms-animation: rebound 2s linear infinite;
+                        -o-animation: rebound 2s linear infinite;
+                        animation: rebound 2s linear infinite;
+                        transform-box: fill-box;
+                        transform-origin: center;
+                    }
                 }
 
                 @media all and (max-width: 1023px) {

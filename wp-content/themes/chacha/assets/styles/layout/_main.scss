@@ -76,18 +76,6 @@ body:not(.wp-admin):not(.wp-customizer),
 		box-sizing: border-box;
 	}
 
-	.logo.primary {
-		svg {
-			-webkit-animation: floating 4s linear infinite;
-			-moz-animation: floating 4s linear infinite;
-			-ms-animation: floating 4s linear infinite;
-			-o-animation: floating 4s linear infinite;
-			animation: floating 4s linear infinite;
-			transform-box: fill-box;
-			transform-origin: center;
-		}
-	}
-
 	svg text tspan {
 		font-size: inherit;
 	}
