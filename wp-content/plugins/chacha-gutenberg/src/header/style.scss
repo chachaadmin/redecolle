@@ -220,7 +220,7 @@ body:not(.wp-admin),
         flex-flow: column nowrap;
 
         .logo {
-            padding: 30px 0 0 28px;
+            padding: 30px 0 0 28px !important;
 
             svg {
                 max-width: 100%;
