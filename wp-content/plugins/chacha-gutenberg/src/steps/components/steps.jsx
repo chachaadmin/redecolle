@@ -23,11 +23,23 @@ export default function Steps(props) {
 
         if (videos) {
             videos.forEach(function (video) {
+
+                var title = video.closest('.step-item').querySelector('h2');
+                if (title) title = title.textContent || title.innerText;
                 video.onplay = function () {
 
                     let parent = video.parentElement;
                     let item = parent.parentElement;
                     item.classList.add('play');
+
+                    console.log(video.querySelector('source').src);
+                    dataLayer.push({
+                        'event': 'gtm.video',
+                        'gtm.videoStatus': 'start',
+                        'gtm.videoUrl': video.querySelector('source').src,
+                        'gtm.videoTitle': title,
+                        'gtm.videoProvider': 'Amazon S3'
+                    });
                 };
                 video.onended = function () {
 
