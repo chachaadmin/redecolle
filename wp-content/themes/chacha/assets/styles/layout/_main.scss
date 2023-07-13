@@ -80,7 +80,7 @@ body:not(.wp-admin):not(.wp-customizer),
 		font-size: inherit;
 	}
 
-	*:not(ul, li, ol, .container) {
+	*:not(ul, li, ol, .container, button, .cky-consent-container *, .cky-modal *) {
 		margin: 0;
 		padding: 0;
 	}
