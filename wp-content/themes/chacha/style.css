@@ -11,3 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: full-site-editing
 Text Domain: fse
 */
+
+small a {
+    font-size: inherit !important;
+}
