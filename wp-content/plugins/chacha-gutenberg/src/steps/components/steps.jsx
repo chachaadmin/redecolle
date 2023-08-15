@@ -70,8 +70,14 @@ export default function Steps(props) {
                                 </video>
                                 <div className="step-image">
                                     <img src={item.post_image.guid} alt={item.post_title} />
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="94" height="109" viewBox="0 0 94 109">
-                                        <path id="Polygone_3" data-name="Polygone 3" d="M54.5,0,109,94H0Z" transform="translate(94) rotate(90)" fill="#9b91f4" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="166" height="166" viewBox="0 0 166 166">
+                                        <g id="Groupe_386" data-name="Groupe 386" transform="translate(-425 -1509)">
+                                            <path id="Polygone_3" data-name="Polygone 3" d="M40.5,0,81,69H0Z" transform="translate(550 1552) rotate(90)" fill="#fff" />
+                                            <g id="Ellipse_123" data-name="Ellipse 123" transform="translate(425 1509)" fill="none" stroke="#fff" stroke-width="6">
+                                                <circle cx="83" cy="83" r="83" stroke="none" />
+                                                <circle cx="83" cy="83" r="80" fill="none" />
+                                            </g>
+                                        </g>
                                     </svg>
                                 </div>
 
