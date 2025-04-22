@@ -30,7 +30,7 @@ export default function Header(props) {
                 <div className="column-1">
                     <h1 className="title-home">{props.data.title}</h1>
                     <div className="content-home" dangerouslySetInnerHTML={{ __html: props.data.content }}></div>
-                    <a className="button" href={__('#formulaire', 'chacha-gutenberg')}>{__("Je m'inscris", 'chacha-gutenberg')}</a>
+                    <a className="button" href={__('#formulaire', 'chacha-gutenberg')}>{__("J'aimerais vous parler", 'chacha-gutenberg')}</a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="122.771" height="128.704" viewBox="0 0 122.771 128.704">
                         <defs>
                             <clipPath id="clipPath-rectangle_146">
